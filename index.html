@@ -1,0 +1,256 @@
+
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <script src="https://getbootstrap.com/docs/5.3/assets/js/color-modes.js"></script>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="author" content="NOMBRE APELLIDO" />
+        <title>Katherine Burgos</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet">
+        <style>
+            :root{
+                /* PENDIENTE */    
+                --bs-body-font-family: 'Quicksand', sans-serif;            
+            }
+           
+            [data-bs-theme="light"] { 
+                /* PENDIENTE */
+                --bs-link-color-rgb: 100, 200, 200;
+                --bs-link-hover-color-rgb: 200, 0, 0;
+                --bs-body-bg: #f1fff6;
+            }
+            
+            [data-bs-theme="dark"] { 
+                /* PENDIENTE */
+                 --bs-link-color-rgb: 140, 190, 190;
+                --bs-link-hover-color-rgb: 255, 255, 255;
+                --bs-body-bg: #4f546c;
+            }
+            
+            .bd-mode-toggle { 
+                z-index: 1500; 
+            }
+            
+            #frase {
+                background: #e6edd0 url("https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg") center center no-repeat;
+                background-size: cover;
+            }
+            #aca {
+                color: #777702;
+            }
+        </style>
+    </head>
+    <body class="overflow-x-hidden">
+        <!--acá deben agregar más símbolos-->
+        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+            <symbol id="check2" viewBox="0 0 16 16">
+                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+            </symbol>
+            <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+                <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"
+                />
+                <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"
+                />
+            </symbol>
+            <symbol id="sun-fill" viewBox="0 0 16 16">
+                <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
+                />
+            </symbol>
+            <symbol id="emoji" viewBox="0 0 16 16">
+                <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7Zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216ZM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
+            </symbol>
+            <symbol id="otro" viewBox="0 0 16 16">
+                 <path d="m14.12 10.163 1.715.858c.22.11.22.424 0 .534L8.267 15.34a.598.598 0 0 1-.534 0L.165 11.555a.299.299 0 0 1 0-.534l1.716-.858 5.317 2.659c.505.252 1.1.252 1.604 0l5.317-2.66zM7.733.063a.598.598 0 0 1 .534 0l7.568 3.784a.3.3 0 0 1 0 .535L8.267 8.165a.598.598 0 0 1-.534 0L.165 4.382a.299.299 0 0 1 0-.535L7.733.063z"/>
+                <path d="m14.12 6.576 1.715.858c.22.11.22.424 0 .534l-7.568 3.784a.598.598 0 0 1-.534 0L.165 7.968a.299.299 0 0 1 0-.534l1.716-.858 5.317 2.659c.505.252 1.1.252 1.604 0l5.317-2.659z"/>
+
+            </symbol>
+            <symbol id="pipul" viewBox="0 0 16 16">
+                <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm1.679-4.493-1.335 2.226a.75.75 0 0 1-1.174.144l-.774-.773a.5.5 0 0 1 .708-.708l.547.548 1.17-1.951a.5.5 0 1 1 .858.514ZM11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/>
+                <path d="M8.256 14a4.474 4.474 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4s1 1 1 1h5.256Z"/>
+
+            </symbol>
+            
+        </svg>
+        <!--acá el cambio de themes-->
+        <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+            <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center bg-dark shadow-sm" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
+                <svg class="bi my-1 theme-icon-active" fill="gray" width="1em" height="1em"><use href="#circle-half"></use></svg>
+                <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+                <li><button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false"><svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#sun-fill"></use></svg>Light<svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg></button></li>
+                <li><button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false"><svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>Dark<svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg></button></li>
+            </ul>
+        </div>    
+        <!--acá el encabezado que se esconde/depliega con un clic del menú-->
+        <header data-bs-theme="dark">
+            <div class="collapse text-bg-dark" id="navbarHeader">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-8 col-md-7 py-4">
+                            <h4>Sobre mi</h4>
+                            <p class="text-body-secondary">
+                                Mi nombre es Katherine Burgos, tengo 22 años y estoy estudiando la carrera de Diseño mención Visualidad y Medios en la Universidad de Chile.
+                            </p>
+                        </div>
+                        <div class="col-sm-4 offset-md-1 py-4">
+                            <h4>Contáctame</h4>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                                      </svg>
+                                    <a href="https://github.com/katherineburgosa">Github</a></li>
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                                        <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+                                      </svg>
+                                    <a href="https://twitter.com/Katheri94758841">Twitter</a></li>
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                                    <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
+                                    </svg>
+                                    katherine2000a@gmail.com</li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar navbar-black bg-black shadow-lg ">
+                <div class="container">
+                    <a href="index.html" class="navbar-brand d-flex align-items-center fw-bolder">Katherine Burgos</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <!--acá está lo principal-->
+        <main id="alla">
+            <!--una sección para la frase-->
+            <section class="py-5" id="frase">
+                <div class="container">
+                    <div class="row">
+                        <div class="col py-5">
+                            <p class="display-6 p-1 text-black ">El diseño es el método de juntar <b>la forma y el contenido.</b> El diseño es simple, por eso es tan complicado.
+                                <i>-Paul Rand</i></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--una sección para las ventajas competitivas-->
+            <section class="py-5">
+                <div class="container">
+                    <div class="row g-5">
+                        <div class="col-md-4">
+                            <h2 class="h4 fw-bolder"><svg class="bi mb-1 me-1" width="1em" height="1em" fill="currentColor" ><use href="#emoji"></use></svg> Análisis de problemas</h2>
+                            <p>Identificar, analizar y determinar problemas, demandas y necesidades.</p>
+                        </div>
+                        <div class="col-md-4">
+                            <h2 class="h4 fw-bolder"><svg class="bi mb-1 me-1" width="1em" height="1em" fill="currentColor"><use href="#otro"></use></svg> Investigar actores y contexto</h2>
+                            <p>Observa fenómenos del entorno en diferentes escalas
+                                Analiza fenómenos de mediación entre las ciudadanías, las comunidades, la persona y sus contextos.</p>
+                        </div>
+                        <div class="col-md-4">
+                            <h2 class="h4 fw-bolder"><svg class="bi mb-1 me-1" width="1em" height="1em" fill="currentColor"><use href="#pipul"></use></svg>Compromiso</h2>
+                            <p>Asume compromisos, de manera constante y autónoma con su desarrollo personal y profesional</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--una sección para el portafolio-->
+            <section class="py-5 bg-body-tertiary">
+                <div class="container" id="alla">
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 mb-3 g-3" id="aca"></div>
+                </div>
+            </section>
+        </main>
+        <!--un pie de página-->
+        <footer class="py-4 bg-dark text-light">
+            <div class="container px-5"><p class="text-center small">Katherine Burgos &copy; 2023</p></div>
+        </footer>
+        <!--algo de JS-->
+       
+         <!--Toast-->
+         <div class="toast position-fixed bottom-0 start-0 mb-3 ms-3" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false">
+            <div class="toast-header">
+                👋
+                <strong class="me-auto">Bienvenida</strong>
+                <small>Ahora</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                Bienvenido a mi portafolio.
+            </div>
+        </div>
+        <script>
+            const data = [
+                {
+                    img: ["fotosHTML/catalogo1.jpg", "fotosHTML/catalogo4.jpg", "fotosHTML/catalogo2.jpg","fotosHTML/catalogo3.jpg","fotosHTML/catalogo6.jpg"],
+                    title: "Catálogo: La legislación que seca a Chile",
+                    text: "<p>Este proyecto, desarrollado en el sexto semestre de la carrera, consiste en un catálogo de un atlas visual, en el cual se exponen imágenes respecto a la sequía que vive el país debido a la legislación, el catálogo contiene prensa escrita, archivos del diario oficial y algunas de las zonas que están principalmente afectadas con la escasez hídrica.</p>",
+                },
+                {
+                    img: ["fotosHTML/edward1.jpg", "fotosHTML/edward2.jpg"],
+                    title: "Diseño de información: El hombre manos de tijera",
+                    text: "<p>Para el transversal Diseño de información y visualización de datos tuvimos que basarnos en una película para representar de forma gráfica cierto aspecto que nos pareciera interesante, en mi caso, escogí la emocionalidad de Edward a medida que iba avanzando la trama.</p>",
+                },
+                {
+                    img: ["fotosHTML/consti1.jpg", "fotosHTML/uno.jpg", "fotosHTML/dos.jpg", "fotosHTML/tres.jpg"],
+                    title: "Diseño de información: Inclusión en los procesos constitucionales",
+                    text: "<p>Para proyecto tres realizamos una infografía sobre los procesos constitucionales de los que yo escogí paridad de género, pueblos originarios y participación ciudadana.</p>",
+                },
+                {
+                    img: ["fotosHTML/sinto1.jpg", "fotosHTML/sinto2.jpg", "fotosHTML/sinto4.jpg"],
+                    title: "Logo SINTOMA para grupo motion graphic",
+                    text: "<p>Este logo es parte de proyecto VII en el cual estaremos aprendiendo sobre el motion graphic, para esto formamos grupos de tres integrantes y junto con mis compañeras, somos SINTOMA estudio.</p>",
+                },
+                {
+                    img: ["fotosHTML/mono1.jpg", "fotosHTML/mono2.jpg", "fotosHTML/mono5.jpg"],
+                    title: "Dibujos ",
+                    text: "<p>Aquí puedes ver algunos de mis dibujos</p>",
+                },
+                {
+                    img: ["fotosHTML/encu5.jpg", "fotosHTML/encu1.jpg", "fotosHTML/encu3.jpg", "fotosHTML/encu4.jpg"],
+                    title: "Encuadernación experimental",
+                    text: "<p>Para proyecto seis, tuvimos que experimentar encuadernando, aquí ves algunos ejemplos.</p>",
+                },
+                {
+                    img: ["fotosHTML/iko123.jpg", "fotosHTML/iko2.jpg","fotosHTML/iko1.jpg"],
+                    title: "Pictogramas",
+                    text: "<p>Para el transversal de Diseño de información realizamos pictogramas de nosotros y de tres de nuestros compañeros.</p>",
+                },
+                {
+                    img: ["fotosHTML/pin1.jpeg", "fotosHTML/pin2.jpeg", "fotosHTML/pin3.jpeg"],
+                    title: "Piñata para Doomerfest",
+                    text: "<p>Ayudé a un amigo de la Universidad con su proyecto para no me acuerdo, y eso</p>",
+                },
+            ];
+            const donde = document.querySelector("#aca");
+            data.forEach((x, i) => {
+                donde.innerHTML += '<div class="col"><div class="card h-100 shadow-sm bg-light-subtle border-0"><img class="card-img-top" src="' + x.img[0] + '"><div class="card-body"><p class="card-title"><a href="#" onclick = "detalle(' + i +
+                    ')" class="text-decoration-none ">' + x.title + "</a></p> <div class='d-flex justify-content-between align-items-center mt-3'> </div></div></div>";
+            });
+            const dondemas = document.querySelector("#alla");
+            function detalle(nro) {
+                let fotos = "";
+                data[nro].img.forEach((f) => {
+                    fotos += '<img class="w-100 my-3 rounded" src="' + f + '">';
+                });
+                dondemas.innerHTML = '<section class="bg-body-tertiary"><div class="container pb-5"><div class="row"><div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto"><h1 class="display-6 mt-5"><button type="button" class="btn btn-sm btn-outline-danger shadow-sm mb-2 me-3 fw-bold" onClick="window.location.reload()">&larr; VOLVER</button> ' + data[nro].title + '</h1> <figure class="mb-2">' + fotos + '</figure>' + data[nro].text + '</div></div></div></section>';
+            
+            }
+        </script>
+         <script>
+            window.onload = (event) => {
+                let myAlert = document.querySelector(".toast");
+                let bsAlert = new bootstrap.Toast(myAlert);
+                bsAlert.show();
+            };
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>  
+    </body>
+</html>
